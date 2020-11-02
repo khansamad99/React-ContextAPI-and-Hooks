@@ -1,4 +1,5 @@
 import React,{useContext} from 'react';
+import BookDetails from './BookDetails';
 import {BookProvider} from '../context/BookContext';
 
 const BookList = () => {
@@ -6,9 +7,9 @@ const BookList = () => {
      return books.length ? (
          <div className="book-list">
             <ul>
-                (books.map(book => {
+                {books.map(book => {
                     return (<BookDetails book={book} key={book.id}/>);
-                }))
+                })}
             </ul>
          </div>
      ):(

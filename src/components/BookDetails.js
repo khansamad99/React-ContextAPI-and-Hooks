@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { BookContext } from '../contexts/BookContext';
+import { BookProvider } from '../context/BookContext';
 
 const BookDetails = ({ book }) => {
-  const { removeBook } = useContext(BookContext);
+  const { removeBook } = useContext(BookProvider);
   return (
     <li onClick={() => removeBook(book.id)}>
       <div className="title">{book.title}</div>
